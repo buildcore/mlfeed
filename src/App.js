@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-
+import Nav from './components/Nav';
 import Article from './components/Article';
+import { Routes, Route, Outlet, Link } from 'react-router-dom';
 
 function App() {
   const [articles, setArticles] = useState([]);
