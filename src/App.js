@@ -13,7 +13,16 @@ function App() {
         return;
       }
       res.json().then((data) => {
-        if (data != null) setArticles(data.data.children);
+        if (data != null) {
+          var temp = data.data.children;
+          var articles = [];
+          for (var i = 0; i < temp.length; i++) {
+            if (temp[i].data.thumbnail_height && !temp[i].data.is_gallery) {
+              articles.push(temp[i]);
+            }
+          }
+          setArticles(articles);
+        }
       });
     });
   }, [subreddit]);
