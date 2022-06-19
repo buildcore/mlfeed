@@ -3,6 +3,9 @@ import Nav from './components/Nav';
 import Article from './components/Article';
 import { Routes, Route, Outlet, Link } from 'react-router-dom';
 
+// infinite scroll: https://codepen.io/theguyinthechair/pen/ezxVqw
+// knowledge graph: https://codepen.io/drastorguev/details/EEadaB
+
 function App() {
   const [articles, setArticles] = useState([]);
   const [subreddit, setSubreddit] = useState('pics');
@@ -36,7 +39,8 @@ function App() {
           value={subreddit}
         />
       </header>
-      <p className="ad">Sponsor us</p>
+      <nav></nav>
+      <p className="ad text-3xl font-bold underline">Sponsor us</p>
       <div className="articles">
         {articles != null
           ? articles.map((article, index) => (
