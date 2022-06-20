@@ -40,6 +40,7 @@ function App() {
         />
       </header>
       <nav></nav>
+      <p classname="">The community app to test general ML</p>
       <p className="ad text-3xl font-bold underline">Sponsor us</p>
       <div className="articles">
         {articles != null
